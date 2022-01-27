@@ -1,4 +1,6 @@
-﻿
+﻿using Hilo.Game;
+
+
 namespace hilo
 {
     /// <summary>
@@ -12,8 +14,8 @@ namespace hilo
         /// <param name="args">The given arguments.</param>
         static void Main(string[] args)
         {
-            Director director = new Director();
-            director.StartGame();
+            Dealer dealer = new Dealer();
+            dealer.StartGame();
         }
     }
 }
