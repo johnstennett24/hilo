@@ -49,7 +49,7 @@ namespace hilo.Game
             }
             firstCard.Deal();
             Console.WriteLine($"The card is: {firstCard.cardValue}");
-            Console.WriteLine("Higher or lower? [h/l]");
+            Console.Write("Higher or lower? [h/l]  ");
             guess = Console.ReadLine();
         }
 
@@ -90,11 +90,18 @@ namespace hilo.Game
             {
                 return;
             }
+            if (score <= 0)
+            {
+                isPlaying = !isPlaying;
+                Console.WriteLine($"Sorry, you lost. Your score is: {score}");
+                return;
+            }
             Console.WriteLine($"Next card was: {newCard.cardValue}");
-            Console.WriteLine($"Your score is: {score}\n");
-            Console.WriteLine($"Play again? [y/n]");
+            Console.WriteLine($"Your score is: {score}");
+            Console.Write($"Play again? [y/n]  ");
             string drawCard = Console.ReadLine();
             isPlaying = (drawCard == "y");
+            Console.WriteLine();
 
             
         }
