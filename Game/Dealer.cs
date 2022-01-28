@@ -13,6 +13,10 @@ namespace hilo.Game
     {
         public bool isPlaying = true;
         public int score = 300;
+        public string guess = Console.ReadLine();
+
+        Card firstCard = new Card();
+        Card newCard = new Card();
 
         /// <summary>
         /// Constructs a new instance of Dealer.
@@ -43,11 +47,10 @@ namespace hilo.Game
             {
                 return;
             }
-            Card firstCard = new Card();
-            firstCard.drawCard();
-            Console.Write($"The card is: {firstCard.value}");
-            Console.Write("Higher or lower? [h/l]");
-            string guess = Console.ReadLine();
+            firstCard.Deal();
+            Console.WriteLine($"The card is: {firstCard.cardValue}");
+            Console.WriteLine("Higher or lower? [h/l]");
+            guess = Console.ReadLine();
         }
 
         /// <summary>
@@ -60,14 +63,13 @@ namespace hilo.Game
             {
                 return;
             }
-            Card newCard = new Card();
-            newCard.drawCard();
-            if (newCard.value > firstCard.value && guess == "h" )
+            newCard.Deal();
+            if (newCard.cardValue > firstCard.cardValue && guess == "h" )
             {
                 score += 100;
             } 
 
-            else if (newCard.value < firstCard.value && guess == "l")
+            else if (newCard.cardValue < firstCard.cardValue && guess == "l")
             {
                 score += 100;
             }
@@ -88,7 +90,7 @@ namespace hilo.Game
             {
                 return;
             }
-            Console.WriteLine($"Next card was: {newCard.value}");
+            Console.WriteLine($"Next card was: {newCard.cardValue}");
             Console.WriteLine($"Your score is: {score}\n");
             Console.WriteLine($"Play again? [y/n]");
             string drawCard = Console.ReadLine();

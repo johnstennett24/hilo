@@ -9,7 +9,7 @@ namespace hilo.Game
     //              Deals a card to the player
     public class Card
     {
-    public int cardvalue = 0;
+    public int cardValue = 0;
 
     public Card()
     {
@@ -18,7 +18,7 @@ namespace hilo.Game
         public void Deal()
         {
             Random random = new Random();
-            cardvalue = random.Next(1,13);
+            cardValue = random.Next(1,13);
             
         }
     }
