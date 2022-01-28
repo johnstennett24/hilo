@@ -64,6 +64,10 @@ namespace hilo.Game
                 return;
             }
             newCard.Deal();
+            while (newCard.cardValue == firstCard.cardValue)
+            {
+                newCard.Deal();
+            }
             if (newCard.cardValue > firstCard.cardValue && guess == "h" )
             {
                 score += 100;
