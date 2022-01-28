@@ -1,4 +1,7 @@
-namespace hilo
+using System;
+using System.Collections.Generic;
+
+namespace hilo.Game
 {
     // This is the card class
     //Methods: 

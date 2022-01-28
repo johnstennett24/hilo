@@ -11,8 +11,8 @@ namespace hilo.Game
     /// </summary>
     public class Dealer
     {
-        bool isPlaying = true;
-        int score = 300;
+        public bool isPlaying = true;
+        public int score = 300;
 
         /// <summary>
         /// Constructs a new instance of Dealer.
