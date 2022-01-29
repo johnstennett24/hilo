@@ -1,0 +1,24 @@
+Program: Hilo
+
+Classes: 
+        Ara Arajuo
+        Dealer :
+            Controls game flow and deals cards and points to the player
+            Methods: Dealer
+                     StartGame
+                        Starts the Game
+                     GetInputs
+                        Gets the inputs from the user to play or not and high or low
+                     DoUpdates
+                        Updates the game with the user inputs
+                     DoOutputs
+                        Shows the user if they were wrong or not and outputs that
+        John Stennett
+        Card:
+            Controls the card number that is outputed to the Dealer class
+            Methods: 
+                    Card
+                    Deal
+                        Gives and stores a random number between 1-12
+        Alexander Howard                
+        Program.cs: This file or chunk of code makes sure that the program runs
